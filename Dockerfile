@@ -1,8 +1,6 @@
 FROM openjdk:8
 
-ENV
-SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-385
-9397.zip" \
+ENV SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip" \
 ANDROID_HOME="/usr/local/android-sdk" \
 ANDROID_VERSION=26 \
 ANDROID_BUILD_TOOLS_VERSION=26.0.2
@@ -17,8 +15,7 @@ RUN mkdir "$ANDROID_HOME" .android \
 
 # Install Android Build Tool and Libraries
 RUN $ANDROID_HOME/tools/bin/sdkmanager --update
-RUN $ANDROID_HOME/tools/bin/sdkmanager
-"build-tools;${ANDROID_BUILD_TOOLS_VERSION}" \
+RUN $ANDROID_HOME/tools/bin/sdkmanager "build-tools;${ANDROID_BUILD_TOOLS_VERSION}" \
 "platforms;android-${ANDROID_VERSION}" \
 "platform-tools"
 FROM gradle:8.1.1-jdk11-alpine
