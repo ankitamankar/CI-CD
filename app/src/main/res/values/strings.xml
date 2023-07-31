@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CI-CDApplication</string>
+    <string name="title">CI-CD Application</string>
+    <string name="middle_text">This is a basic CI-CD Application.</string>
+</resources>
